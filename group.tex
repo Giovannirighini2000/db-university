@@ -9,3 +9,4 @@ SELECT COUNT(*) AS `id_exams`,AVG(`vote`) as `avg_vote`,`exam_id` FROM `exam_stu
 
 
 4. Contare quanti corsi di laurea ci sono per ogni dipartimento
+SELECT COUNT(*) AS `num_course` ,`departments`.`name`FROM `departments` JOIN `degrees` ON `departments`.`id`=`degrees`.`department_id` GROUP BY `departments`.`name`;
